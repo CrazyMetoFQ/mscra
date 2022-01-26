@@ -8,7 +8,8 @@ This is a program with quite a freindly user interface for downloading manga fro
 
 Use the following button in the notebook file.
 
-![open in colab](/static/open_in_colab.png 50x50)
+![open in colab]()
+<img src="/static/open_in_colab.png" width=50px height = 25px> open in colab </img>
 
 ---
 ## Usage Instruction
