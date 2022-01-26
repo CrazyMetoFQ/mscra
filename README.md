@@ -5,6 +5,11 @@
 This is a program with quite a freindly user interface for downloading manga from the internet.
 
 ---
+
+Use the following button in the notebook file.
+![open in colab](/static/open_in_colab.png)
+
+---
 ## Usage Instruction
 
 You dont neccerarly have to run all of them but u must run the initionalize
