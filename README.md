@@ -9,7 +9,7 @@ This is a program with quite a freindly user interface for downloading manga fro
 
 You dont neccerarly have to run all of them but u must run the initionalize
 
-![how2run](/static/how2run_adv_config.png)
+![how2run](/static/how to run advcnfg.png)
 
 
 use 'a' (the Triangle) to expand the hidden cells
@@ -49,10 +49,10 @@ use the debugger to scan the site if u have any problem
 
 * Use the setting menu to switch to dark mode
 
->![goto_setting.png]()
+>![goto_setting.png](/static/go2settings.png)
 
 
->![set_dark_mode.png]()
+>![set_dark_mode.png](/static/set_dark.png)
 
 
 <br>
