@@ -7,7 +7,8 @@ This is a program with quite a freindly user interface for downloading manga fro
 ---
 
 Use the following button in the notebook file.
-![open in colab](/static/open_in_colab.png)
+
+![open in colab](/static/open_in_colab.png 50x50)
 
 ---
 ## Usage Instruction
