@@ -9,7 +9,7 @@ This is a program with quite a freindly user interface for downloading manga fro
 
 You dont neccerarly have to run all of them but u must run the initionalize
 
-![how2run](mscra/static/how2run_adv_config.png)
+![how2run](/static/how2run_adv_config.png)
 
 
 use 'a' (the Triangle) to expand the hidden cells
