@@ -1,6 +1,6 @@
 """
-runs the asyncronous lib
-throught the cli
+provides input to the asyncronous lib
+run throught the cli
 
 works in ipython through this work around
 """
@@ -14,6 +14,8 @@ parser.add_argument("base_link")
 parser.add_argument("min_")
 parser.add_argument("max_")
 parser.add_argument("single")
+parser.add_argument("raw_csv")
+
 
 parser.add_argument("base_path")
 
@@ -48,6 +50,15 @@ elif args.debug__ == "True":
   args.debug__ = True
 else:
   print("eror")
+  
+  
+if args.raw_csv == "False":
+  args.raw_csv = False
+elif args.raw_csv == "True":
+  args.raw_csv = True
+else:
+  print("eror")
+  
 
 # base_link where the number will change in the link such as ch-1, ch-2 put {}
 base_link = args.base_link
@@ -55,8 +66,17 @@ base_link = args.base_link
 if args.single != "True":
   pg_links = [base_link.format(i) for i in range(int(args.min_),int(args.max_))]
 else:
-  pg_links = [base_link]
+  
+  if args.raw_csv:
+    with open("pg_links_.csv") as f:
+      rcsv = f.read()
+      
+     pg_links = rcsv.split(",")
+    
+   else: 
+      pg_links = [base_link]
 
+      
 # path to where the pdfs will reside
 ch_path = args.base_path
 
