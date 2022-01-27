@@ -3,6 +3,7 @@ view image in ipython notebook
 """
 
 from IPython.display import display,HTML,Image
+from os import listdir
 
 class ImageViewEr:
   
@@ -23,7 +24,7 @@ class ImageViewEr:
     """
     
     self.img_path = image_path
-    self.img_list = [f"{self.img_path}/{img}" for img in os.listdir(self.img_path)]
+    self.img_list = [f"{self.img_path}/{img}" for img in listdir(self.img_path)]
 
   def sort_ls(self, x, y):
     """
