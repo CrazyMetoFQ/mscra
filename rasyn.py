@@ -71,7 +71,7 @@ else:
     with open("pg_links_.csv") as f:
       rcsv = f.read()
       
-     pg_links = rcsv.split(",")
+    pg_links = rcsv.split(",")
     
    else: 
       pg_links = [base_link]
