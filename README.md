@@ -1,7 +1,7 @@
 
 
 
-# MSCRA 3.2.0.1 (dev)
+# MSCRA 3.5 (dev)
 This is a program with quite a freindly user interface for downloading manga from the internet.
 
 ---
