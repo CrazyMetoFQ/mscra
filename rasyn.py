@@ -5,7 +5,7 @@ run throught the cli
 works in ipython through this work around
 """
 
-import asyn as ayn
+from asyn import asyn as ayn
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -63,16 +63,16 @@ else:
 # base_link where the number will change in the link such as ch-1, ch-2 put {}
 base_link = args.base_link
 # putting numbers in the link
-if args.single != "True":
+if args.single != "True" and not args.raw_csv:
   pg_links = [base_link.format(i) for i in range(int(args.min_),int(args.max_))]
 else:
   
   if args.raw_csv:
-    with open("pg_links_.csv") as f:
+    with open("mscra/pg_links_.csv") as f:
       rcsv = f.read()
       
-    pg_links = rcsv.split(",")
-    
+    pg_links = [s.replace(" ", "") for s in rcsv.split(",")]
+   
   else: 
       pg_links = [base_link]
 
