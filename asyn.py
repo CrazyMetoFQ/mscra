@@ -2,7 +2,6 @@
 The main file to run asynchrounous requests
 """
 
-
 import time
 # complete_start = time.time()  
 
