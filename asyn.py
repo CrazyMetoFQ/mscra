@@ -45,7 +45,7 @@ async def get_urls(urls, round_to = 20, debug_ = False):
     return urls_result
 
 
-def find_imgs(cnt ,ky = "src", strt=None,stp=None,step=None, round_to = 20, debug_ = False):
+def find_imgs(cnt , base_link, ky = "src", strt=None,stp=None,step=None, round_to = 20, debug_ = False):
   """
   cnt -> html
   ky -> str, what is the key for src for imgs
@@ -69,6 +69,11 @@ def find_imgs(cnt ,ky = "src", strt=None,stp=None,step=None, round_to = 20, debu
       si = im[ky]
       si.replace("\n","")
       si.replace("\t","")
+
+      if "." not in si[:-7] and "/" == si[0]:
+        si = base_link + si
+      else:
+        pass
 
       if "http" not in si:
         si = "http:" + si
@@ -150,7 +155,7 @@ def converr(imgs,path, save_as = "pdf", file_format = ".pdf",round_to = 20):
     
     
 
-def main_func(urls, path, save_info = ("pdf",".pdf"),round_to = 20,debug__ = False, iKy = 'src',imgs_kwargs ={'strt':None,'stp':None,'step':None}):
+def main_func(urls, path, base_link, save_info = ("pdf",".pdf"),round_to = 20,debug__ = False, iKy = 'src',imgs_kwargs ={'strt':None,'stp':None,'step':None}):
   """
   urls -> list of urls
   path -> path to pdfs
@@ -160,7 +165,7 @@ def main_func(urls, path, save_info = ("pdf",".pdf"),round_to = 20,debug__ = Fal
   pg_d = asyncio.run(get_urls(urls, round_to,debug_ = debug__)) # pages to find the imgs
   print("\n------------------------\n")
 
-  all_imgs = [find_imgs(cnt, round_to = round_to,debug_=debug__,ky = iKy, **imgs_kwargs) for cnt in pg_d["content"]] # all image links in nested list
+  all_imgs = [find_imgs(cnt, base_link,round_to = round_to,debug_=debug__,ky = iKy, **imgs_kwargs) for cnt in pg_d["content"]] # all image links in nested list
   print("------------------------\n")
 
   del pg_d
