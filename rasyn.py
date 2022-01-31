@@ -26,6 +26,7 @@ parser.add_argument("round_to")
 parser.add_argument("img_args")
 parser.add_argument("debug__")
 parser.add_argument("ikey")
+parser.add_argument("home_link")
 
 args = parser.parse_args()
 
@@ -68,6 +69,7 @@ ch_path = args.base_path
 # MAIN FUNCTION
 ayn.main_func(pg_links, 
               ch_path, 
+              args.home_link,
               (args.save_As, args.file_Format),
               int(args.round_to),
               args.debug__,
