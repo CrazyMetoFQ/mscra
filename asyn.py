@@ -1,6 +1,8 @@
+
 """
 The main file to run asynchrounous requests
 """
+
 
 import time
 # complete_start = time.time()  
@@ -185,6 +187,5 @@ def main_func(urls, path, base_link, save_info = ("pdf",".pdf"),round_to = 20,de
   total_time = end - start
   print("It took {} seconds to make {} chapters.".format(round(total_time, round_to),len(urls)))
 
-  
   
   
