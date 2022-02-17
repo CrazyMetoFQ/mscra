@@ -1,0 +1,28 @@
+
+{
+	
+	"ch_path": {"content":"/content/chps", 
+				"type":"string"},
+
+	"imag_args": {"content":"0,None,1", 
+				  "type":"string"},
+	"do_delete_prev": {"content":true , 
+					   "type":"boolean"},
+
+	"round_to": {"content":3, 
+				 "type":"slider", 
+				 "min":1, "max":10, "step":1},
+	"do_print_args": {"content":true ,
+					  "type":"boolean"},
+
+	 "zip_file_name": {"content":"file.zip", 
+	 				   "type":"string"},
+
+
+	"do_debug": {"content":false, 
+				 "type":"boolean"},
+	"img_key": {"content":"src", 
+				"type":"dropdown",
+				"options":["src", "data-src", "lazy-loading-src"]}
+
+}

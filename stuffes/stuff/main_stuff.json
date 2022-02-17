@@ -1,0 +1,26 @@
+
+{
+	"base_link":{"content":"https://w12.mangafreak.net/Read1_Darling_In_The_Franxx_{}",
+				 "type":"string",
+				 "help_": "base_link"},
+
+	"min_":  {"content":1,
+			  "type":"number", 
+	     	  "help_": "min"},
+	"max_":  {"content": 3,
+			  "type":"number",
+			  "help_": "max"},
+
+	"single_": {"content":false,
+				"type":"boolean",
+				"help_": "is_single"},
+	"is_homePage": {"content":false,
+					"type":"boolean",
+				    "help_": "is_homePage"},
+
+	"save_file_as": {"content":"pdf",
+					 "type":"dropdown",
+					 "options":["Pdf", "Image"],
+				 	 "help_": "save_file_as"}
+
+}

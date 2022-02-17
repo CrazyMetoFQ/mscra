@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='form.css' ) }}"> -->
+
+	<title>Trial Form</title>
+</head>
+
+<body>
+
+	<h1> Form </h1>
+
+	<p> Pls Work </p>
+
+	<div class="formWrapper">
+		
+		<form method="POST">
+
+			<div>
+				{{form.hidden_tag()}}
+			</div>
+			
+			<div>
+				{{form.name.label(class_="formLabel")}}
+				{{form.name(class_="formInput")}}
+			</div>
+			
+			<div>
+				<br>
+				{{form.sumbit(class_="formInput")}}
+			</div>
+
+		</form>
+
+		{% if name %}
+
+			<p>{{name}}</p>
+
+		{% else %}
+
+			<p>pls do da stuff</p>
+
+		{%endif%}
+
+	</div>
+
+	<div>
+		
+		<br>
+		<hr>
+		<p> <a href="{{ url_for('home') }}"> Home Page </a> </p>
+
+	</div>
+
+
+
+</body>
+</html>

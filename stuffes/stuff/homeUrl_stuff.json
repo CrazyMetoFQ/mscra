@@ -1,0 +1,23 @@
+
+{
+
+"homePage_url": {"content":"url",
+                "type":"string"},
+"print_all":  {"content":false, 
+                "type":"boolean"},
+"print_done": {"content":true, 
+              "type":"boolean"},
+"do_reverse": {"content":true, 
+              "type":"boolean"},
+
+"start_l": {"content": 7 ,
+            "type":"slider", 
+              "min":0, "max":25, "step:":1},
+"stop_l": {"content":-17,
+            "type":"slider",  
+              "min":-25, "max":1," step":1},
+"step_l": {"content":1 , 
+            "type":"slider", 
+              "min":-2, "max":2, "step":1}
+              
+}
