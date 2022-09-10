@@ -129,8 +129,8 @@ def converr(imgs,path, save_as = "pdf", file_format = ".pdf",round_to = 20):
       try:
         f.write(img2pdf.convert(imgs))
       
-      except Exception() as e:
-        print(e)
+      except:
+        print("Error at pdf making. Len of imgs =", len(imgs))
 
     end = time.time()
     total_time = end - start
